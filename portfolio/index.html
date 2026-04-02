@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yanis Cherif — Portfolio</title>
+    <!--
+      POURQUOI PAS DE <link> POUR LE CSS ICI ?
+      Avec Vite, le CSS est importé directement dans main.js via :
+        import './style.css'
+      Vite s'occupe de tout injecter. Tu n'as plus besoin de <link> manuel.
+
+      POURQUOI type="module" SUR LE SCRIPT ?
+      Ça active les modules ES (import/export) dans le navigateur.
+      C'est obligatoire pour que Vite fonctionne.
+    -->
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- NAV -->
+    <nav>
+      <a href="#ME" class="nav-logo">YC<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://drive.google.com/file/d/1wbWR89u0UtfBGo54uyvXb2TeSTSiVZrE/view?usp=sharing" download>↓ CV</a></li>
+      </ul>
+    </nav>
+
+    <!-- ME -->
+    <div id="ME">
+      <div class="ME-text">
+        <p class="ME-eyebrow">// Available for internship</p>
+        <h1 class="ME-name">
+          Yanis<br/>
+          <span class="outline">Cherif</span>
+        </h1>
+        <p class="ME-role">
+          Web Developer & <em>Digital Craftsman</em>
+        </p>
+        <p class="ME-desc">
+          18yo dev at Epitech Paris. I build things that look good, run fast, and feel right. From frontend finesse to Linux rabbit holes — I'm here to make code beautiful.
+        </p>
+        <div class="ME-cta">
+          <a href="#projects" class="btn btn-primary">See my work</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="ME-visual">
+        <div class="ME-card">
+          <div class="ME-avatar">YC</div>
+          <div class="card-name">Yanis Cherif</div>
+          <div class="card-title">Epitech Paris · 1st Year</div>
+          <div class="card-tags">
+            <span class="tag">React</span>
+            <span class="tag">VITE</span>
+            <span class="tag">Tailwind</span>
+            <span class="tag">Python</span>
+            <span class="tag">Go</span>
+            <span class="tag">Arch Linux</span>
+          </div>
+          <div class="card-stat">
+            <div class="stat-item">
+              <div class="stat-n">7</div>
+              <div class="stat-l">Repos</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-n">18</div>
+              <div class="stat-l">Years old</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-n">∞</div>
+              <div class="stat-l">Coffee</div>
+            </div>
+          </div>
+          <div class="ME-badge">
+            <span>◆ Open to ◆ Work ◆</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- ABOUT -->
+    <div id="about">
+      <div class="about-text">
+        <p class="section-label">// about_me.md</p>
+        <h2 class="section-title" style="margin-bottom:1.5rem;">Who<br/><span class="outline">Am I</span></h2>
+        <p>
+          I'm <strong>Yanis</strong>, an 18-year-old developer based in <span class="highlight">Paris, France</span>, studying at Epitech Paris. I fell in love with code because it's the closest thing to Magic — turning nothing into something people actually use and enjoy.
+        </p>
+        <p>
+          My philosophy? <strong>Make everything easier for everyone, every day</strong> — whether that's a cleaner UI, a smarter script, or an automated setup that saves someone an hour. I believe good software is invisible: it just works, beautifully.
+        </p>
+        <p>
+          When I'm not coding, I'm deep in my <span class="highlight">Arch Linux rice</span> or watching Valorant pro series. I used to compete myself at a <strong>semi-professional tier 3 level</strong> — esports taught me discipline, team communication, and how to perform under pressure. Skills that translate pretty well to dev work.
+        </p>
+        <p>
+          Right now I'm actively looking for a <strong>web dev internship</strong> (minimum 1 month) to grow, contribute, and prove myself in a real environment.
+        </p>
+      </div>
+
+      <div class="about-aside">
+        <div class="esport-card reveal">
+          <div class="esport-label">// Career highlight</div>
+          <div class="esport-title">Ex Semi-Pro Valorant</div>
+          <div class="esport-sub">Tier 3 Professional — competed for several months at organized team level. Retired from competing, still playing for fun.</div>
+        </div>
+
+        <div class="arch-card reveal">
+          <div class="arch-label">// Current setup</div>
+          <div class="arch-line"><span class="dot"></span> OS: Arch Linux (btw)</div>
+          <div class="arch-line"><span class="dot pink"></span> DE: Custom KDE Plasma</div>
+          <div class="arch-line"><span class="dot gold"></span> Editor: VSCode</div>
+          <div class="arch-line"><span class="dot"></span> Shell: Zsh</div>
+          <div class="arch-line"><span class="dot pink"></span> Languages: JS · Python · Go</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <p class="section-label">// skills.json</p>
+      <h2 class="section-title">Tech<br/><span class="outline">Stack</span></h2>
+
+      <div class="skills-grid reveal">
+        <div class="skill-cell">
+      <div class="skill-icon">🌐</div>
+      <div class="skill-name">HTML / CSS</div>
+      <div class="skill-level">Advanced</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-icon">⚡</div>
+      <div class="skill-name">JavaScript</div>
+      <div class="skill-level">Advanced</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-icon">⚛️</div>
+      <div class="skill-name">React</div>
+      <div class="skill-level">Average</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:50%"></div></div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-icon">🐍</div>
+      <div class="skill-name">Python</div>
+      <div class="skill-level">Proficient</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-icon">🐹</div>
+      <div class="skill-name">Go</div>
+      <div class="skill-level">Beginner</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:35%"></div></div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-icon">🐘</div>
+      <div class="skill-name">PHP</div>
+      <div class="skill-level">Basics</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:30%"></div></div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-icon">🗄️</div>
+      <div class="skill-name">MariaDB / SQL</div>
+      <div class="skill-level">Proficient</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-icon">🍃</div>
+      <div class="skill-name">MongoDB</div>
+      <div class="skill-level">Intermediate</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:40%"></div></div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-icon">🐋</div>
+      <div class="skill-name">Docker</div>
+      <div class="skill-level">Intermediate</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:55%"></div></div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-icon">🎨</div>
+      <div class="skill-name">Figma</div>
+      <div class="skill-level">Basic</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:45%"></div></div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-icon">🐧</div>
+      <div class="skill-name">Linux (Arch)</div>
+      <div class="skill-level">Advanced</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+    </div>
+    <div class="skill-cell">
+      <div class="skill-icon">🔧</div>
+      <div class="skill-name">Git / GitHub</div>
+      <div class="skill-level">Proficient</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div>
+    </div>
+
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <p class="section-label">// projects/</p>
+      <h2 class="section-title">What I've<br/><span class="outline">Built</span></h2>
+
+      <div class="projects-grid">
+        <div class="project-card featured reveal">
+          <div class="project-num">01</div>
+          <div class="project-lang">Python · NLP · CLI</div>
+          <div class="project-name">Bookworm (Alice in Wonderland)</div>
+          <div class="project-desc">
+            A personal NLP engine for classic literature sourced from Project Gutenberg. Bookworm downloads books automatically and runs full analysis pipelines: lexical diversity, topic modeling via TF-IDF + LSA, named entity recognition, extractive summarization, and cosine-similarity book recommendations. No API keys. No setup beyond a pip install.
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/yAnn-99/Alice-In-Wonderland" target="_blank" class="project-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-num">02</div>
+          <div class="project-lang">Go · Rush</div>
+          <div class="project-name">Game of Life</div>
+          <div class="project-desc">
+            Conway's Game of Life implemented in Go during a 6-hour Epitech rush. The challenge: use an unfamiliar language under pressure. Learned Go fundamentals, architecture setup, and delivered a working solution.
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/yAnn-99/Game-Of-Life" target="_blank" class="project-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-num">03</div>
+          <div class="project-lang">Shell · DevTools</div>
+          <div class="project-name">Easy TeamSpeak 6 Setup</div>
+          <div class="project-desc">
+            One-click setup script for a local TeamSpeak 6 server on any OS. Built as a template repo for easy deployment — picked up a star on GitHub. Shows off my sysadmin and scripting skills.
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/yAnn-99/Easy-TeamSpeak6-Setup" target="_blank" class="project-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-num">04</div>
+          <div class="project-lang">CSS · Linux Ricing</div>
+          <div class="project-name">Holy Creation</div>
+          <div class="project-desc">
+            A checkpoint of my Arch Linux rice — custom theming, window manager config, and visual setup. Because your desktop should be as beautiful as your code. Personal project, regularly updated.
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/yAnn-99/Holy-creation" target="_blank" class="project-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-num">05</div>
+          <div class="project-lang">This Portfolio</div>
+          <div class="project-name">Portfolio</div>
+          <div class="project-desc">
+            A concise and structured portfolio built with Vite, Tailwind CSS and vanilla JavaScript.
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/yAnn-99/Portfolio" target="_blank" class="project-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <p class="section-label">// contact.tsx</p>
+      <h2 class="section-title">Let's<br/><span class="outline">Talk</span></h2>
+
+      <div class="contact-grid">
+        <div>
+          <p class="contact-blurb">
+            Looking for a dev who brings both <em>creativity</em> and technical precision? I'm available for internship starting now.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:yanis.cherif@epitech.eu" class="contact-item">
+              <span class="contact-item-icon">✉️</span>
+              yanis.cherif@epitech.eu
+            </a>
+            <a href="tel:0602288389" class="contact-item">
+              <span class="contact-item-icon">📱</span>
+              06 02 28 83 89
+            </a>
+            <a href="https://github.com/yAnn-99" target="_blank" class="contact-item">
+              <span class="contact-item-icon">🐙</span>
+              github.com/yAnn-99
+            </a>
+            <a href="https://discord.com/users/704271132710141973" target="_blank" class="contact-item">
+              <span class="contact-item-icon">💬</span>
+              Discord
+            </a>
+            <a href="https://drive.google.com/file/d/1wbWR89u0UtfBGo54uyvXb2TeSTSiVZrE/view?usp=sharing" download class="contact-item">
+              <span class="contact-item-icon">📄</span>
+              Download CV (PDF)
+            </a>
+          </div>
+        </div>
+
+        <form onsubmit="return false;">
+          <div class="form-group">
+            <label class="form-label" for="name">Name</label>
+            <input class="form-input" type="text" id="name" placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input" type="email" id="email" placeholder="your@email.com" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="msg">Message</label>
+            <textarea class="form-textarea" id="msg" placeholder="Tell me about your project or opportunity..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;text-align:center;">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <span class="footer-copy">© 2025 Yanis Cherif <span>✦</span></span>
+      <a href="#ME" class="footer-scroll">↑ Back to top</a>
+    </footer>
+
+  </body>
+</html>
