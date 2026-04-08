@@ -80,19 +80,25 @@ nav {
   background: linear-gradient(to bottom, rgba(13,8,16,0.95), transparent);
   backdrop-filter: blur(2px);
 }
-.nav-logo {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.6rem;
-  letter-spacing: 0.12em;
-  color: var(--text);
-  text-decoration: none;
+
+.ME-nav-logo {
+  width: 45px; 
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  margin-bottom: 1.2rem;
+  object-fit: cover;
+  object-position: 60% top;
+  display: block;
 }
+
 .nav-logo span { color: var(--pink); }
 .nav-links {
   display: flex;
   gap: 2.5rem;
   list-style: none;
 }
+
 .nav-links a {
   color: var(--subtle);
   text-decoration: none;
