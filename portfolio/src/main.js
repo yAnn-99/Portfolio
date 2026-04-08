@@ -25,13 +25,15 @@ animRing()
 
 /* ─── SCROLL REVEAL ───────────────────────────────────────── */
 
+
 const reveals = document.querySelectorAll('.reveal')
+
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible')
-    }
+    e.target.classList.toggle('visible', e.isIntersecting)
   })
 }, { threshold: 0.15 })
+
+reveals.forEach(r => obs.observe(r))
 
 reveals.forEach(r => obs.observe(r))
