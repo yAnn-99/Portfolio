@@ -9,8 +9,12 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "typed.js": "^2.1.0",
     "@tailwindcss/vite": "^4.2.2",
     "tailwindcss": "^4.2.2",
     "vite": "^8.0.1"
+  },
+  "dependencies": {
+    "typed.js": "^3.0.0"
   }
 }

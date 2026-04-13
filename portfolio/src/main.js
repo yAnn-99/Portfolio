@@ -36,5 +36,20 @@ const obs = new IntersectionObserver(entries => {
 
 reveals.forEach(r => obs.observe(r))
 
-reveals.forEach(r => obs.observe(r))
+/* ─── TYPED.JS ───────────────────────────────────────────── */
+import Typed from 'typed.js'
+
+new Typed('.ME-role', {
+  strings: [
+    'Web Developer & <em>Digital Craftsman</em>',
+    'Frontend Enthusiast',
+    'Linux Nerd (btw)',
+    'Open to Internship 👀',
+  ],
+  typeSpeed: 50,
+  backSpeed: 30,
+  backDelay: 2000,
+  loop: true,
+  smartBackspace: true,
+})
 
