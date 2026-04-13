@@ -1,4 +1,5 @@
 import './style.css'
+import Typed from 'typed.js'
 
 /* ─── CUSTOM CURSOR ───────────────────────────────────────── */
 const cursor = document.getElementById('cursor')
@@ -25,7 +26,6 @@ animRing()
 
 /* ─── SCROLL REVEAL ───────────────────────────────────────── */
 
-
 const reveals = document.querySelectorAll('.reveal')
 
 const obs = new IntersectionObserver(entries => {
@@ -37,7 +37,6 @@ const obs = new IntersectionObserver(entries => {
 reveals.forEach(r => obs.observe(r))
 
 /* ─── TYPED.JS ───────────────────────────────────────────── */
-import Typed from 'typed.js'
 
 new Typed('.ME-role', {
   strings: [

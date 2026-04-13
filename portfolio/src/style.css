@@ -231,7 +231,7 @@ nav {
 }
 
 .ME-card {
-  width: 340px;
+  width: 22rem;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 4px;
