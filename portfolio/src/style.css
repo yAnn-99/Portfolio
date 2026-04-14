@@ -489,7 +489,6 @@ hr.divider {
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
   opacity: 0.55;
   border-radius: 4px;
 }
@@ -742,6 +741,13 @@ footer {
   footer { flex-direction: column; gap: 0.8rem; text-align: center; padding: 2rem 1.5rem; }
   body { cursor: auto; }
   .cursor, .cursor-ring { display: none; }
+  .ME-card { width: 100%; padding: 1.5rem; box-sizing: border-box; }
+  .ME-visual { width: 100%; }
+}
+
+@media (max-width: 380px) {
+  .ME-card { width: 100%; padding: 1.2rem; box-sizing: border-box; }
+  #ME { padding: 6rem 1rem 2rem; gap: 2rem; }
 }
 
 /* ─── SCROLL REVEAL ───────────────────────────────────────── */

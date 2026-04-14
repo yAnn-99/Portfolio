@@ -45,6 +45,7 @@ new Typed('.ME-role', {
     'Linux Nerd (btw)',
     'Open to Internship 👀',
   ],
+  startdelay: 1000,
   typeSpeed: 50,
   backSpeed: 30,
   backDelay: 2000,
