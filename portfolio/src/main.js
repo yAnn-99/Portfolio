@@ -53,3 +53,16 @@ new Typed('.ME-role', {
   smartBackspace: true,
 })
 
+new Typed('p.contact-blurb', {
+  strings: [
+    "Looking for a dev who brings both <em>creativity</em> and technical precision? I'm available for internship starting now.",
+    'from <em>June the 1st</em> and at least one month',
+    'Have a nice day ',
+  ],
+  startdelay: 1000,
+  typeSpeed: 50,
+  backSpeed: 30,
+  backDelay: 2000,
+  loop: true,
+  smartBackspace: true,
+})
