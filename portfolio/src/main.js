@@ -19,8 +19,7 @@ function lenisRaf(time) {
 }
 requestAnimationFrame(lenisRaf)
 
-// Empêche Lenis de bloquer les liens d'ancre de la nav
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]:not([data-cv])').forEach(anchor => {
   anchor.addEventListener('click', e => {
     e.preventDefault()
     const target = document.querySelector(anchor.getAttribute('href'))
