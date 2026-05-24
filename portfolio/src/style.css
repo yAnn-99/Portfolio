@@ -364,6 +364,10 @@ section {
   color: var(--pink);
   margin-bottom: 0.5rem;
 }
+#about .section-label {
+  font-size: 0.62rem;
+  color: var(--pink)
+}
 .section-title {
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
@@ -374,6 +378,9 @@ section {
 .section-title .outline {
   -webkit-text-stroke: 1px var(--muted);
   color: transparent;
+}
+.section-title--about {
+  margin-bottom: 1.5rem;
 }
 hr.divider {
   border: none;
@@ -399,6 +406,17 @@ hr.divider {
 }
 .about-text p strong { color: var(--text); }
 .about-text p .highlight { color: var(--purple); }
+
+.section-label::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--purple), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
 
 .esport-card {
   background: var(--surface);
@@ -760,3 +778,121 @@ footer {
   transform: translateY(0);
 }
 
+/* ─── PROJECT SKELETONS ──────────────────────────────────── */
+/* Affiché pendant le fetch GitHub */
+.project-skeleton {
+  background: var(--bg2);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.project-skeleton.featured { grid-column: 1 / -1; }
+
+/* Animation shimmer */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position:  400px 0; }
+}
+
+.skeleton-line {
+  height: 12px;
+  border-radius: 2px;
+  background: linear-gradient(90deg,
+    var(--surface) 25%,
+    var(--border)  50%,
+    var(--surface) 75%
+  );
+  background-size: 400px 100%;
+  animation: shimmer 1.4s infinite linear;
+  margin-bottom: 0.8rem;
+  width: 100%;
+}
+.skeleton-line--short { width: 35%; }
+.skeleton-line--title { width: 60%; height: 20px; margin-bottom: 1.2rem; }
+
+/* ─── PROJECT STARS ──────────────────────────────────────── */
+.project-stars {
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin-left: auto;
+}
+
+/* ─── CONTACT FORM (BEM) ─────────────────────────────────── */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.contact-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-form__label {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--pink);
+}
+
+.contact-form__input {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  padding: 0.85rem 1rem;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.contact-form__input::placeholder { color: var(--muted); }
+
+.contact-form__input:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+}
+
+.contact-form__input--textarea {
+  resize: vertical;
+  min-height: 130px;
+  line-height: 1.7;
+}
+
+/* Bouton submit */
+.contact-form__btn {
+  align-self: flex-start;
+  cursor: none;
+  border: none;
+  transition: all 0.2s, opacity 0.2s;
+}
+.contact-form__btn--loading {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+.contact-form__btn--success {
+  background: #22c55e;
+}
+
+/* Feedback status */
+.contact-form__status {
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  min-height: 1.4rem;
+}
+.contact-form__status--success { color: #22c55e; }
+.contact-form__status--error   { color: var(--rose); }
+
+/* ─── RESPONSIVE FORM ────────────────────────────────────── */
+@media (max-width: 768px) {
+  .contact-form__btn { width: 100%; text-align: center; }
+}
