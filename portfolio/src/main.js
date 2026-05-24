@@ -343,7 +343,7 @@ async function fetchAndRenderProjects() {
 }
 
 
-const CV_URL = '/Portfolio/CV_Yanis_Cherif.pdf'
+const CV_URL = './CV_Yanis_Cherif.pdf'
 
 document.querySelectorAll('a[data-cv]').forEach(link => {
   link.href = CV_URL
